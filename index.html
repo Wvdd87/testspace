@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" wp-template>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,14 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+        <section style="width: 100vw; height: 100vh;">
+            <div class="container" style="overflow: hidden;" cms-post="loop">
+                <img src="http://pinegrow.com/placeholders/img15.jpg" style="height: 50vh; width: 100%;" cms-post-image>
+                <h1 cms-post-title>Heading 1</h1>
+                <h2><span cms-post-field="time" cms-post-field-type="content">time</span> /// <span cms-post-field="place" cms-post-field-type="content">place</span></h2>
+                <p cms-post-content>Paragraph</p>
+            </div>
+        </section>
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

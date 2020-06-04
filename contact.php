@@ -13,15 +13,11 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+        <div class="container">
+</div>
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <section class="hero-section">
-            <video width="300px" height="400px" autoplay muted loop>
-                <source src="/assets/video/SM-IMB.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/popper.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>

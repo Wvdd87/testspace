@@ -28,38 +28,25 @@
         <link rel="stylesheet" type="text/css" href="style/addtohomescreen.css">
         <script src="src/addtohomescreen.js"></script>
     </head>
-    <body>simple test 3
-        <button onclick="prompt()">Click me</button>
+    <body>simple test 4
+        <div class="ath-container banner-bottom-center">
+            <div class="ath-banner">
+                <div class="ath-banner-cell">
+                    <img src="meta/2048-logo-48x48.png" alt="PWA" class="ath-prompt-logo">
+                </div>
+                <div class="ath-banner-title">
+                    <p>Install 2048?</p>
+                </div>
+                <div class="ath-banner-cell">
+                    <button class="btn btn-cancel btn-link">Not Now</button>
+                </div>
+                <div class="ath-banner-cell">
+                    <button class="btn btn-install btn-success">Install</button>
+                </div>
+            </div>
+        </div>
         <script>
- addToHomescreen();
- </script>
-        <script>
-        let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent the mini-infobar from appearing on mobile
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI notify the user they can install the PWA
-  showInstallPromotion();
-});
-        </script>
-        <script>
-        buttonInstall.addEventListener('click', (e) => {
-  // Hide the app provided install promotion
-  hideMyInstallPromotion();
-  // Show the install prompt
-  deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  deferredPrompt.userChoice.then((choiceResult) => {
-    if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the install prompt');
-    } else {
-      console.log('User dismissed the install prompt');
-    }
-  });
-});
+        
         </script>
     </body>
 </html>

@@ -1,9 +1,7 @@
 {
  "name": "Shot by Brent",
-     "short_name": "Brent",
  "display": "standalone",
      "start_url": "https://wvdd87.github.io/choka",
-         "background_color": "#fff",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

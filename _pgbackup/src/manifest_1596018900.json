@@ -2,7 +2,7 @@
  "name": "Shot by Brent",
      "short_name": "Shot by Brent",
  "display": "standalone",
-     "start_url": "https://wvdd87.github.io/testspace/index.html",
+     "start_url": "https://wvdd87.github.io/testspace",
          "background_color": "#fff",
  "icons": [
   {

@@ -28,38 +28,10 @@
         <link rel="stylesheet" type="text/css" href="style/addtohomescreen.css">
         <script src="src/addtohomescreen.js"></script>
     </head>
-    <body>simple test 3
-        <button onclick="prompt()">Click me</button>
+    <body>
         <script>
  addToHomescreen();
  </script>
-        <script>
-        let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent the mini-infobar from appearing on mobile
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI notify the user they can install the PWA
-  showInstallPromotion();
-});
-        </script>
-        <script>
-        buttonInstall.addEventListener('click', (e) => {
-  // Hide the app provided install promotion
-  hideMyInstallPromotion();
-  // Show the install prompt
-  deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  deferredPrompt.userChoice.then((choiceResult) => {
-    if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the install prompt');
-    } else {
-      console.log('User dismissed the install prompt');
-    }
-  });
-});
-        </script>
+        simple test 3
     </body>
 </html>

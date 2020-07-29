@@ -27,6 +27,24 @@
         <link rel="stylesheet" type="text/css" href="style/addtohomescreen.css">
     </head>
     <body>
-        test back to 0
-</body>
+        <p>
+      If the <code>beforeinstallprompt</code> event fires, there will be a button displayed allowing
+      you to use <code>prompt()</code> on the deferred event. </p>
+        <button hidden>Show Prompt</button>
+        <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+
+        window.addEventListener('beforeinstallprompt', event => {
+          event.preventDefault();
+          var button = document.querySelector('button');
+          button.removeAttribute('hidden');
+          button.addEventListener('click', () => {
+            event.prompt();
+            button.setAttribute('disabled', true);
+          });
+        });
+      }
+    </script>
+    </body>
 </html>

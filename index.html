@@ -1,71 +1,18 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Add To Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-title" content="Add to Home">
-        <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-        <link rel="manifest" href="src/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" type="text/css" href="style/addtohomescreen.css">
-    </head>
-    <body>
-        <button class="add-button">Add to home screen</button>
-        test 2 chrome
-        <script>
-
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-           .register('sw.js')
-           .then(function() { console.log('Service Worker Registered'); });
-}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
 
-      let deferredPrompt;
-const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+    <video width="640" controls>
+  <source src="https://lh3.googleusercontent.com/TKzE6L7CgMIHQgHiCvkRId1ebOhy_uwLX9D_LU1NYCsABZ6HWZFVdrrfL7RcepsG9Coyr7viPvDd83lg7poA5-7PIVyTRiElfCmsd1wXT51uNQFidc9eMzNNMddzdqKYRm2c835LL4uMJOJYiXvtPPKYQ21K82t9tWSDvac85QKsHqoqyxUl5DKn4X6GibgPJSjBhLKpgFc3L9aidoH1UBIL8ibhs0xQov1aZtJk24atTM8JZP8oamu3UsSrpCmjiTEAkj-OIWhevKdlScu0lKMmszhTIAVSAWay4XhXQZ1IdmueDaf-H1bbOPnUlTdNL5l4-ZLCR039NxfLxN33CSyBKSqeOTXM2rsAmh3a_BPScYlB1jkbB_Gyh4YivA1wjZ38b3LX9MMw98SFg0A5oMIYExSup9Kp0kMKAmEUA6U1O8SaBNHtsKIrxLMILDFtfmZlHZPM4EACP5gVnhW0Wzcdlq1tQAZGiwQFNAGuznFewLlpoiws9TcnifVB4kth6nXprDFBBvpWWfT5Gm7aRygdPyvysVwijDbMHHa5VsVlG0qz4qlLevM_Bq-kQS9ncMrwwyZPsCUHy1iFi8G0FQuD72thmU-Wr1N1zCNjA0TPmRxTGuIMaqGgotP6WcwMSIxr8jPV3p0-TXu9nG_WbmukMq450R42mEVfCk3GCG03zXm6E-1NhpzFo6mhyg=m15?cpn=BKkKFhZSSJjst26D&c=WEB_EMBEDDED_PLAYER&cver=20200728" type="video/mp4">
 
-      window.addEventListener('beforeinstallprompt', (e) => {
+  Your browser does not support the video tag.
+</video>
 
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI to notify the user they can add to home screen
-  addBtn.style.display = 'block';
 
-  addBtn.addEventListener('click', (e) => {
-    // hide our user interface that shows our A2HS button
-    addBtn.style.display = 'none';
-    // Show the prompt
-    deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
-  });
-});
-      </script>
-        <style>.add-button { position: absolute; top: 30px; left: 30px; }</style>
-    </body>
+  </body>
 </html>

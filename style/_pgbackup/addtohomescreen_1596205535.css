@@ -35,16 +35,14 @@
     z-index: 2147483641;
     padding: 0.7em 0.6em;
     background-size: 100% auto;
+    box-shadow: 0 0.2em 0 #ffffff;
     font-family: sans-serif;
     font-size: 15px;
     line-height: 1.5em;
     text-align: center;
     background-color: #ffffff;
-    width: 100vw;
+    width: 90vw;
     position: absolute;
-    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
-    left: 0;
-    bottom: 0;
 }
 
 .ath-container small {
@@ -56,8 +54,8 @@
 
 .ath-ios.ath-phone {
     bottom: 1.8em;
-    left: 0;
-    margin-left: 0;
+    left: 50%;
+    margin-left: -9em;
     display: flex;
 }
 
@@ -174,7 +172,7 @@
     padding: 0;
     z-index: 2147483642;
     text-shadow: 0 0.1em 0 #fff;
-    font-size: 0.8em;
+    font-size: 1.1em;
     width: calc(100% - 40px);
     text-align: left;
 }
